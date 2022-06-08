@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { useResultContext } from "../context/ResultContextProvider";
 import { Loading } from "./Loading";
-import { data } from "autoprefixer";
 
 export const Results = () => {
   const { results, isLoading, getResults, searchTerm } = useResultContext();
