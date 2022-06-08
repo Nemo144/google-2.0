@@ -12,6 +12,7 @@ export const Search = () => {
   useEffect(() => {
     if (debouncedValue) setSearchTerm(debouncedValue);
   }, [debouncedValue]);
+
   return (
     <div className="relative sm:ml-48 md:ml-72 sm:-mt-10 mt-3">
       <input
