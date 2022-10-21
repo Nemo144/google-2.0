@@ -7,6 +7,11 @@ import { Links } from "./Links";
 export const Search = () => {
   const [text, setText] = useState("Elon Musk");
   const { setSearchTerm } = useResultContext();
+
+  // Debounce search term so that it only gives us latest value ...
+  // ... if searchTerm has not been updated within last 300ms.
+  // The goal is to only have the API call fire when user stops typing ...
+  // ... so that we aren't hitting our API rapidly.
   const [debouncedValue] = useDebounce(text, 300);
 
   useEffect(() => {

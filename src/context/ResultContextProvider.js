@@ -4,8 +4,13 @@ const ResultContext = createContext();
 const baseUrl = "https://google-search3.p.rapidapi.com/api/v1";
 
 export const ResultContextProvider = ({ children }) => {
+  //API search results
   const [results, setResults] = useState([]);
+
+  // Searching status (whether there is pending API request)
   const [isLoading, setIsLoading] = useState(false);
+
+  //state for searchterm
   const [searchTerm, setSearchTerm] = useState("Elon Musk");
 
   const getResults = async (type) => {
