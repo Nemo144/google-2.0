@@ -6,6 +6,7 @@ import { Loading } from "./Loading";
 
 export const Results = () => {
   const { results, isLoading, getResults, searchTerm } = useResultContext();
+  // console.log(searchTerm);
   const location = useLocation();
 
   useEffect(() => {
