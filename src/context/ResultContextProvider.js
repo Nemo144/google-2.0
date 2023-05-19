@@ -19,7 +19,7 @@ export const ResultContextProvider = ({ children }) => {
 
     const response = await fetch(`${baseUrl}${type}`, {
       method: "GET",
-      url: "https://google-search74.p.rapidapi.com/",
+      url: "",
       params: { query: "Nike", limit: "10", related_keywords: "true" },
       headers: {
         "X-RapidAPI-Key": "",
